@@ -267,10 +267,9 @@ h4 {
     margin-bottom: 2rem;
 }
 
-.features__icon svg {
-    height: 2.5rem;
-    width: 2.5rem;
-    fill: var(--color-primary);
+.features__icon i {
+    font-size: 2.5rem;
+    color: var(--color-primary);
 }
 
 .features__header {
@@ -374,16 +373,19 @@ h4 {
     background-color: var(--color-tertiary-opacity);
 }
 
-.operations__icon--1 svg {
-    fill: var(--color-secondary-darker);
+.operations__icon--1 i {
+    color: var(--color-secondary-darker);
+    font-size: 2.5rem;
 }
 
-.operations__icon--2 svg {
-    fill: var(--color-primary);
+.operations__icon--2 i {
+    color: var(--color-primary);
+    font-size: 2.5rem;
 }
 
-.operations__icon--3 svg {
-    fill: var(--color-tertiary);
+.operations__icon--3 i {
+    color: var(--color-tertiary);
+    font-size: 2.5rem;
 }
 
 
