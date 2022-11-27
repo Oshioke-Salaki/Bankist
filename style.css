@@ -430,6 +430,9 @@ h4 {
     border-radius: 50%;
     height: 5.5rem;
     width: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 3.25rem;
     cursor: pointer;
 }
