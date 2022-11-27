@@ -11,6 +11,9 @@ const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 const nav = document.querySelector('.nav');
 const header = document.querySelector('.header');
+const allSections = document.querySelectorAll('.section');
+const slides = document.querySelectorAll('.slide');
+const slider = document.querySelector('.slider');
 
 // Modal window
 const openModal = function(e) {
@@ -148,6 +151,20 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 
 headerObserver.observe(header);
 
+//Reaveal Sections
+const revealSection = function(entries, observer) {
+    const [entry] = entries;
+};
+const sectionObserver = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.15,
+});
+
+allSections.forEach(section => {
+    sectionObserver.observe(section);
+    section.classList.add('section--hidden');
+});
+
 //Lazy loading images
 const imgTargets = document.querySelectorAll('img[data-src]');
 console.log(imgTargets);
@@ -174,3 +191,9 @@ const imgObserver = new IntersectionObserver(loadImg, {
 });
 
 imgTargets.forEach(el => imgObserver.observe(el));
+
+//Slider
+slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i})`));
+
+slider.style.transform = `scale(0.5)`;
+slider.style.overflow = 'visible';
