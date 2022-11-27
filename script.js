@@ -18,11 +18,15 @@ const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
 const dotContainer = document.querySelector('.dots');
 
+window.addEventListener('beforeunload', e => {
+    e.preventDefault();
+    e.returnValue = 'Are you sure you want to leave';
+});
+
 // Modal window
 const openModal = function(e) {
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');
-
     e.preventDefault();
 };
 
